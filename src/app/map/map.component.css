@@ -1,0 +1,47 @@
+agm-map {
+    height: 400px;
+    width: 100%;
+  }
+  h2 {
+    color: dodgerblue
+  }
+
+.example-h2 {
+  margin: 10px;
+}
+
+.section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: rgb(27, 142, 241) !important;
+}
+
+.mat-checkbox-inner-container {
+color: rgb(27, 142, 241) !important;
+}
+
+
+div.colored > div {
+  padding: 8px;
+  box-shadow: 0px 2px 3px 0 rgba(52, 47, 51, 0.63);
+  opacity: 0.9;
+  text-align: center;
+}
+
+
+div.colored.box.nopad > div {
+  padding: 0;
+}
+
+.map {
+  border: 2px solid grey;
+  width: 99%;
+  height: 400px;
+  
+}

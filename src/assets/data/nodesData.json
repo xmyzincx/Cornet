@@ -1,0 +1,23 @@
+[
+    {
+        "nodeId": "5",
+        "nodeName": "ABC",
+        "freq": "2650",
+        "latitude": "30",
+        "longitude": "12"
+    },
+    {
+        "nodeId": "2",
+        "nodeName": "PQR",
+        "freq": "2670",
+        "latitude": "12",
+        "longitude": "756"
+    },
+    {
+        "nodeId": "3",
+        "nodeName": "XYZ",
+        "freq": "2275",
+        "latitude": "345",
+        "longitude": "654"
+    }
+]

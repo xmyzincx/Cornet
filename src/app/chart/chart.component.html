@@ -1,0 +1,7 @@
+<h2>{{ title }}</h2>
+<div class="container mat-elevation-z8">
+    <div class="chart" style="display: block">
+      <canvas baseChart #myChart="base-chart" [datasets]="barChartData" [colors]="colors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+        [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</div>

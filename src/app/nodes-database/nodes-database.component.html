@@ -1,0 +1,42 @@
+<h2>{{ title }}</h2>
+
+<div class="container mat-elevation-z8">
+  <mat-table #table [dataSource]="nodesDataSource">
+
+    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Sensor ID Column -->
+    <ng-container matColumnDef="nodeId">
+      <mat-header-cell *matHeaderCellDef >  Node ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.nodeId}} </mat-cell>
+    </ng-container>
+
+    <!-- Channel Column -->
+    <ng-container matColumnDef="nodeName">
+      <mat-header-cell *matHeaderCellDef > Node Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.nodeName}} </mat-cell>
+    </ng-container>
+
+    <!-- Power Column -->
+    <ng-container matColumnDef="freq">
+      <mat-header-cell *matHeaderCellDef > Frequency </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.freq}} </mat-cell>
+    </ng-container>
+
+    <!-- Latitude Column -->
+    <ng-container matColumnDef="latitude">
+      <mat-header-cell *matHeaderCellDef > Latitude </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.latitude"> {{row.latitude}} </mat-cell>
+    </ng-container>
+
+    <!-- Longitude Column -->
+    <ng-container matColumnDef="longitude">
+      <mat-header-cell *matHeaderCellDef > Longitude </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.longitude"> {{row.longitude}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

@@ -1,0 +1,52 @@
+<div class="container mat-elevation-z8">
+  <div fxLayout="row wrap" class="colored box nopad">
+    <div fxFlex="33.33%">
+      <h2>{{ title }}</h2>
+      <div class="map">
+        <agm-map id="map" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [streetViewControl]="false"
+          gestureHandling="cooperative">
+          <agm-marker *ngFor="let m of nodesMarkerList; let i = index" (markerClick)="nodeClickedMarker(m)" [latitude]="m.lat" [longitude]="m.lng"
+            [iconUrl]="m.icon" [visible]="m.visible" [label]="m.label">
+          </agm-marker>
+          <agm-marker *ngFor="let m of channelsMarkerList; let i = index" (markerClick)="sensorClickedMarker(m)" [latitude]="m.lat"
+            [longitude]="m.lng" [iconUrl]="m.icon" [visible]="m.visible" [label]="m.label">
+          </agm-marker>
+        </agm-map>
+      </div>
+      <mat-grid-list cols="2" rowHeight="50px">
+        <section class="section">
+          <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-checkbox [(ngModel)]="nodesVisibility">Nodes</mat-checkbox>
+            <img src={{nodeIcon}}>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-checkbox [(ngModel)]="channelsVisibility">Sensors</mat-checkbox>
+            <img src={{sensorIcon}}>
+          </mat-grid-tile>
+        </section>
+      </mat-grid-list>
+    </div>
+    <div fxFlex="33.33%">
+      <h2>Sensor's detail</h2>
+      <mat-list>
+          <mat-list-item style="white-space: pre"><b>Sensor ID :</b> {{ sensorMarkerDetail.sensorId }}</mat-list-item>
+          <mat-list-item style="white-space: pre"><b>Channel(s) :</b> {{ sensorMarkerDetail.channel }}</mat-list-item>
+          <mat-list-item style="white-space: pre"><b>Antenna height :</b> {{ sensorMarkerDetail.antHeight }}</mat-list-item>
+          <mat-list-item style="white-space: pre"><b>Antenna gain :</b> {{ sensorMarkerDetail.antGain }}</mat-list-item>
+          <mat-list-item style="white-space: pre"><b>Latitude :</b> {{ sensorMarkerDetail.lat }}</mat-list-item>
+          <mat-list-item style="white-space: pre"><b>Longitude :</b> {{ sensorMarkerDetail.lng }}</mat-list-item>
+          <mat-list-item style="white-space: pre"><b>Area type :</b> {{ sensorMarkerDetail.areaType }}</mat-list-item>
+      </mat-list>
+    </div>
+    <div fxFlex="33.33%">
+      <h2>Node's detail</h2>
+      <mat-list>
+        <mat-list-item style="white-space: pre"><b>ID :</b> {{ nodeMarkerDetail.nodeId }}</mat-list-item>
+        <mat-list-item style="white-space: pre"><b>Name :</b> {{ nodeMarkerDetail.nodeName }}</mat-list-item>
+        <mat-list-item style="white-space: pre"><b>Frequency :</b> {{ nodeMarkerDetail.freq }}</mat-list-item>
+        <mat-list-item style="white-space: pre"><b>Latitude :</b> {{ nodeMarkerDetail.lat }}</mat-list-item>
+        <mat-list-item style="white-space: pre"><b>Longitude :</b> {{ nodeMarkerDetail.lng }}</mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

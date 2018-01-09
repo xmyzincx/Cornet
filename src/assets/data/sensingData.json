@@ -1,0 +1,35 @@
+[
+    {
+        "sensorId": "8",
+        "channel": "2",
+        "power": "10",
+        "timestamp": "17",
+        "latitude": "30",
+        "longitude": "12",
+        "antHeight": "13",
+        "antGain": "17",
+        "areaType": "forest"
+    },
+    {
+        "sensorId": "6",
+        "channel": "5",
+        "power": "18",
+        "timestamp": "56",
+        "latitude": "345",
+        "longitude": "46",
+        "antHeight": "23",
+        "antGain": "87",
+        "areaType": "city"
+    },
+    {
+        "sensorId": "5",
+        "channel": "7",
+        "power": "87",
+        "timestamp": "34",
+        "latitude": "223",
+        "longitude": "24",
+        "antHeight": "765",
+        "antGain": "345",
+        "areaType": "open"
+    }
+]
