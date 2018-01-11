@@ -1,12 +1,13 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
 /tmp
 /out-tsc
 
 # dependencies
-/node_modules
+/node_modules/*
+!/node_modules/chart.js/
+!/node_modules/ng2-charts/
 
 # IDEs and editors
 /.idea

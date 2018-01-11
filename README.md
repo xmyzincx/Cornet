@@ -1,6 +1,6 @@
 # Cornet
 
-This project is GUI for Cornet project in CWC-University of Oulu.
+This project is GUI for Cornet project in CWC-University of Oulu. This app might not run correctly because I have changed some codes in the modules such as ng2-charts and chats.js.
 
 ## Development server
 
