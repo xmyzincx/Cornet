@@ -59,7 +59,7 @@ export class ChartComponent implements OnInit {
     }
   };
 
-  private colors = [
+  colors = [
     {
       backgroundColor: 'rgb(230, 25, 75)'
     },
