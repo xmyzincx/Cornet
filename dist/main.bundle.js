@@ -847,7 +847,7 @@ class NodesDatabase {
     constructor(http, dbService) {
         this.http = http;
         this.dbService = dbService;
-        this.url = 'http://localhost:3000/api/allNodes';
+        this.url = 'http://193.166.161.18/api/api/allNodes';
         this.pollingInterval = 3000;
     }
     getAllNodesData() {
@@ -1020,7 +1020,7 @@ class SensingDatabase {
         this.http = http;
         this.dbService = dbService;
         this.sanitizer = sanitizer;
-        this.url = 'http://localhost:3000/api/allChannels';
+        this.url = 'http://193.166.161.18/api/api/allChannels';
         this.pollingInterval = 3000;
     }
     getAllChannelsData() {
