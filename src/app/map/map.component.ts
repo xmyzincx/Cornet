@@ -24,8 +24,8 @@ export class MapComponent implements OnInit {
 	zoom: number = 4;
 	infoWindowOpened = null;
 
-	nodeIcon: string = '/assets/images/m1.png';
-	sensorIcon: string = '/assets/images/m2.png'
+	nodeIcon: string = './assets/images/m1.png';
+	sensorIcon: string = './assets/images/m2.png'
 
 	nodesList: nodeData[];
 	channelsList: channelData[];
