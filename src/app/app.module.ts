@@ -109,7 +109,7 @@ import { ChartComponent } from './chart/chart.component';
     MatTooltipModule,
     HttpModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBeocaV7vWoTY_ob41sR4oKRgRNNUrYxs4'
+      apiKey: ''
     })
 
   ],
