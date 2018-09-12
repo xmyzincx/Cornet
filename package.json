@@ -41,6 +41,7 @@
     "rxjs": "^5.5.3",
     "sshpk": "^1.14.2",
     "uglify-js": "^3.3.8",
+    "url-parse": "^1.4.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
