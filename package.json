@@ -38,6 +38,7 @@
     "moment": "^2.22.2",
     "ng2-charts": "^1.6.0",
     "parsejson": "0.0.3",
+    "randomatic": "^3.1.0",
     "rxjs": "^5.5.3",
     "sshpk": "^1.14.2",
     "uglify-js": "^3.3.8",
