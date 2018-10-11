@@ -4,7 +4,7 @@
       <h2>{{ title }}</h2>
       <div class="map">
         <agm-map id="map" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [streetViewControl]="false"
-          gestureHandling="cooperative">
+          gestureHandling="auto">
           <agm-marker *ngFor="let m of nodesMarkerList; let i = index" (markerClick)="nodeClickedMarker(m)" [latitude]="m.lat" [longitude]="m.lng"
             [iconUrl]="m.icon" [visible]="m.visible" [label]="m.label">
           </agm-marker>

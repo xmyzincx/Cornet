@@ -21,8 +21,8 @@ import { SensingDataSource } from './sensingDataSource';
 
 export class SensingDatabaseComponent implements OnInit {
 
-  title: string = 'Sensing Database'
-  displayedColumns = ['sensorId', 'channel', 'power', 'timestamp', 'latitude', 'longitude', 'antHeight', 'antGain', 'areaType'];
+  title: string = 'Sensors Database'
+  displayedColumns = ['sensorid', 'channel', 'power', 'earfcn', 'freq', 'ch_scan_bw', 'timestamp', 'latitude', 'longitude', 'antHeight', 'antGain', 'areaType'];
   sensingDatabase: SensingDatabase;
   sensingDataSource: SensingDataSource | null;
 

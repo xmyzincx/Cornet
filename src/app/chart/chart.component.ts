@@ -142,9 +142,10 @@ export class ChartComponent implements OnInit {
     this.barChartData = [];
 
     // Sort this list if neccessary. Currently it is unsorted.
-    let uniqueSensorIds = [...new Set(this.channelsList.map(item => item.sensorId))];
+    let uniqueSensorIds = [...new Set(this.channelsList.map(item => item.sensorid))];
 
     for (var sensorId in uniqueSensorIds) {
+
       var channelPowerList: channelMinMax[] = [{
         min: 0,
         max: 0,
@@ -237,12 +238,12 @@ export class ChartComponent implements OnInit {
       };
 
       tempChartDataSet.label = 'Sensor-' + uniqueSensorIds[sensorId];
-      var filteredChannels = this.channelsList.filter((channel: channelData) => channel.sensorId === uniqueSensorIds[sensorId]);
+      var filteredChannels = this.channelsList.filter((channel: channelData) => channel.sensorid === uniqueSensorIds[sensorId]);
 
       for (var channel in filteredChannels) {
         if (parseFloat(filteredChannels[channel].power) < 0) {
-          channelPowerList[parseInt(filteredChannels[channel].channel) - 1].max = parseFloat(filteredChannels[channel].power);
-          channelPowerList[parseInt(filteredChannels[channel].channel) - 1].min = -110;
+          channelPowerList[parseInt(filteredChannels[channel].channel)].max = parseFloat(filteredChannels[channel].power);
+          channelPowerList[parseInt(filteredChannels[channel].channel)].min = -110;
         }
       }
 

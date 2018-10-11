@@ -120,9 +120,9 @@ export class MapComponent implements OnInit {
 		this.channelsMarkerList = [];
 
 		if (this.channelsList.length > 0) {
-			let uniqueSensorIds = [...new Set(this.channelsList.map(item => item.sensorId))];
+			let uniqueSensorIds = [...new Set(this.channelsList.map(item => item.sensorid))];
 			for (var sensorId in uniqueSensorIds) {
-				var filteredChannels = this.channelsList.filter((channel: channelData) => channel.sensorId === uniqueSensorIds[sensorId]);
+				var filteredChannels = this.channelsList.filter((channel: channelData) => channel.sensorid === uniqueSensorIds[sensorId]);
 				var tMarker: channelMarker = {
 					lat: 65.203277,
 					lng: 24.8810778,

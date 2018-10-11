@@ -1,62 +1,81 @@
 <h2>{{ title }}</h2>
 
 <div class="container mat-elevation-z8">
-  <mat-table #table [dataSource]="sensingDataSource" >
+  <mat-table #table [dataSource]="sensingDataSource">
 
     <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
 
     <!-- Sensor ID Column -->
-    <ng-container matColumnDef="sensorId">
-      <mat-header-cell *matHeaderCellDef > Sensor ID </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.sensorId}} </mat-cell>
+    <ng-container matColumnDef="sensorid">
+      <mat-header-cell *matHeaderCellDef> Sensor ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.sensorid}} </mat-cell>
     </ng-container>
 
     <!-- Channel Column -->
     <ng-container matColumnDef="channel">
-      <mat-header-cell *matHeaderCellDef > Channel Number </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Channel Number </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.channel}} </mat-cell>
     </ng-container>
 
     <!-- Power Column -->
     <ng-container matColumnDef="power">
-      <mat-header-cell *matHeaderCellDef > Power </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Power </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.power}} </mat-cell>
+    </ng-container>
+
+    <!-- EARFCN Column -->
+    <ng-container matColumnDef="earfcn">
+      <mat-header-cell *matHeaderCellDef> EARFCN </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.earfcn}} </mat-cell>
+    </ng-container>
+
+    <!-- Frequency Column -->
+    <ng-container matColumnDef="freq">
+      <mat-header-cell *matHeaderCellDef> Frequency </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.freq}} </mat-cell>
+    </ng-container>
+
+    <!-- Ch. Scan BW Column -->
+    <ng-container matColumnDef="ch_scan_bw">
+      <mat-header-cell *matHeaderCellDef> Ch. Scan BW </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.ch_scan_bw}} </mat-cell>
     </ng-container>
 
     <!-- Timestamp Column -->
     <ng-container matColumnDef="timestamp">
-      <mat-header-cell *matHeaderCellDef > Timestamp </mat-header-cell>
-      <mat-cell *matCellDef="let row" [style.color]="row.timestamp"> {{row.timestamp * 1000 | date: 'dd-MM-yyyy mm:HH:ss'}} </mat-cell>
+      <mat-header-cell *matHeaderCellDef> Timestamp </mat-header-cell>
+      <mat-cell *matCellDef="let row" [style.color]="row.timestamp"> {{row.timestamp | date: 'dd-MM-yyyy
+        mm:HH:ss'}} </mat-cell>
     </ng-container>
 
     <!-- Latitude Column -->
     <ng-container matColumnDef="latitude">
-      <mat-header-cell *matHeaderCellDef > Latitude </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Latitude </mat-header-cell>
       <mat-cell *matCellDef="let row" [style.color]="row.latitude"> {{row.latitude}} </mat-cell>
     </ng-container>
 
     <!-- Longitude Column -->
     <ng-container matColumnDef="longitude">
-      <mat-header-cell *matHeaderCellDef > Longitude </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Longitude </mat-header-cell>
       <mat-cell *matCellDef="let row" [style.color]="row.longitude"> {{row.longitude}} </mat-cell>
     </ng-container>
 
     <!-- Antenna Height Column -->
     <ng-container matColumnDef="antHeight">
-      <mat-header-cell *matHeaderCellDef > Antenna Height </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Antenna Height </mat-header-cell>
       <mat-cell *matCellDef="let row" [style.color]="row.antHeight"> {{row.antHeight}} </mat-cell>
     </ng-container>
 
     <!-- Antenna Gain Column -->
     <ng-container matColumnDef="antGain">
-      <mat-header-cell *matHeaderCellDef > Antenna Gain </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Antenna Gain </mat-header-cell>
       <mat-cell *matCellDef="let row" [style.color]="row.antGain"> {{row.antGain}} </mat-cell>
     </ng-container>
 
     <!-- Area Type Column -->
     <ng-container matColumnDef="areaType">
-      <mat-header-cell *matHeaderCellDef > Area Type </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Area Type </mat-header-cell>
       <mat-cell *matCellDef="let row" [style.color]="row.areaType"> {{row.areaType}} </mat-cell>
     </ng-container>
 

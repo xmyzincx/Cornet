@@ -12,7 +12,7 @@ import { channelData } from './channelData';
 
 /** An example database that the data source uses to retrieve data for the table. */
 export class SensingDatabase {
-    url: string = 'http://193.166.161.18/api/api/allChannels';
+    url: string = 'http://localhost:3000/api/allChannels';
 
     pollingInterval: number = 3000;
     

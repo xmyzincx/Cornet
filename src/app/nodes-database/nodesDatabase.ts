@@ -15,7 +15,7 @@ import { SafeUrl } from '@angular/platform-browser/src/security/dom_sanitization
 
 /** An example database that the data source uses to retrieve data for the table. */
 export class NodesDatabase implements OnInit{
-    url: string = 'http://193.166.161.18/api/api/allNodes';
+    url: string = 'http://localhost:3000/api/allNodes';
 
     pollingInterval: number = 3000;
 
